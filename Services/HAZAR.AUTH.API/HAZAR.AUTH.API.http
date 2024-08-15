@@ -1,0 +1,6 @@
+@HAZAR.AUTH.API_HostAddress = http://localhost:5090
+
+GET {{HAZAR.AUTH.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

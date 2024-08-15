@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Common\Domain\Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Common\Infrastructure\Infrastructure.csproj", "{319B8F70-CCC3-4B99-AABB-E2967E9DABDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAZAR.AUTH.API", "Services\HAZAR.AUTH.API\HAZAR.AUTH.API.csproj", "{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{319B8F70-CCC3-4B99-AABB-E2967E9DABDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{319B8F70-CCC3-4B99-AABB-E2967E9DABDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{319B8F70-CCC3-4B99-AABB-E2967E9DABDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{A035AFDC-BCAE-42B2-9D8E-6F771FBAE66A} = {B3E87BCD-27B5-4D98-9453-1B8D5571D834}
 		{297DADD1-2D44-4513-A81A-4794002C1134} = {B3E87BCD-27B5-4D98-9453-1B8D5571D834}
 		{319B8F70-CCC3-4B99-AABB-E2967E9DABDC} = {B3E87BCD-27B5-4D98-9453-1B8D5571D834}
+		{31FDEE2D-ABD6-4FC8-AC7D-48EA1F473FA0} = {1DD7B976-5A0D-423C-BC28-7991BC485060}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {041B6466-80FB-426A-A886-63732003398A}
