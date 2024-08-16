@@ -60,6 +60,19 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("RequireAdminRole", policy => policy.RequireRole(UserRoles.Admin));
     options.AddPolicy("RequireUserRole", policy => policy.RequireRole(UserRoles.User));
 });
+// Program.cs veya Startup.cs dosyasýnda
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5116")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
+
 
 
 var app = builder.Build();
@@ -72,7 +85,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseMiddleware<TokenBlacklistMiddleware>();
 app.UseHttpsRedirection();
-
+app.UseCors("AllowSpecificOrigin");
 app.UseAuthorization();
 
 app.MapControllers();
