@@ -3,6 +3,10 @@ using Domain.Entities;
 using HAZAR.AUTH.API.Middleware;
 using Infrastructure.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using Serilog.Events;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -38,13 +42,13 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-//// Serilog yapýlandýrmasý
-//Log.Logger = new LoggerConfiguration()
-//    .MinimumLevel.Information()
-//    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-//    .Enrich.FromLogContext()
-//    .WriteTo.Console() // Loglarý console'a yazdýrýr
-//    .CreateLogger();
+// Serilog yapýlandýrmasý
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .Enrich.FromLogContext()
+    .WriteTo.Console() // Loglarý console'a yazdýrýr
+    .CreateLogger();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.ApplicationServices();
