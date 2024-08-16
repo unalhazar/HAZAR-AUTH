@@ -1,8 +1,8 @@
+using Application.DependencyInjection;
 using Domain.Entities;
 using HAZAR.AUTH.API.Middleware;
 using Infrastructure.DependencyInjection;
 using Microsoft.OpenApi.Models;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -47,6 +47,7 @@ builder.Services.AddSwaggerGen(c =>
 //    .CreateLogger();
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.ApplicationServices();
 builder.Services.InfrastructureServices(builder.Configuration);
 
 //Policy Tabanlý Yetkilendirme (Geliþmiþ)
