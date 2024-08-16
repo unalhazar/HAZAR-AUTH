@@ -4,7 +4,6 @@ using Application.Features.Users.Commands.RegisterUser;
 using Application.Features.Users.Queries.RefreshToken;
 using Domain.Response.Users;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HAZAR.AUTH.API.Controllers
@@ -35,7 +34,7 @@ namespace HAZAR.AUTH.API.Controllers
         }
 
         [HttpPost("logout")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<LogoutResponse>> LogoutUser(LogoutUserCommand command)
         {
             command.Token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
