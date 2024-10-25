@@ -4,7 +4,6 @@ using Application.Features.Users.Commands.RegisterUser;
 using Application.Features.Users.Queries.RefreshToken;
 using Domain.Response.Users;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HAZAR.AUTH.API.Controllers
@@ -19,7 +18,7 @@ namespace HAZAR.AUTH.API.Controllers
         {
             _mediator = mediator;
         }
-        [AllowAnonymous]
+
         [HttpPost("login")]
         public async Task<ActionResult<LoginResponse>> LoginUser(LoginUserCommand command)
         {
